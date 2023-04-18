@@ -1,0 +1,239 @@
+
+:root{
+    --colorBgc:rgb(59, 56, 56);
+    --colorText:white;
+    --colorLinks:rgb(18, 18, 230);
+    --colorBtn:rgb(70, 70, 198);
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Inter", sans-serif;
+    width: 100vw;
+    min-height:100vh;
+    background: var(--colorBgc);
+    /* overflow: hidden; */
+}
+
+ /* header  */
+ header{
+    width: 100%;
+    background: var(--colorBgc);
+    margin: 0 0 20px 0;
+
+ }
+/* Style de la navbar  */
+nav{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+}
+ 
+/* Navbar left  */
+header nav .logo-nav{
+    color: var(--colorText)
+    
+}
+header nav .logo-nav a{
+  text-decoration: none;
+  color: var(--colorText);
+  text-transform: capitalize;
+    
+}
+
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    justify-content: space-evenly;
+}
+
+header nav ul li{
+    list-style-type: none;
+    padding: 15px 10px;
+}
+header nav ul li a{
+    text-decoration: none;
+    color: var(--colorText);
+    text-transform: capitalize;
+}
+
+
+/* sytle main  */
+
+main{
+    width: 100%;
+    height: 100vh;
+}
+
+/* main container  */
+main .main-container{
+     width: 95%;
+     margin: 0 auto;
+     display: flex;
+    justify-content:space-between;
+    background: var(--colorBgc);
+    align-items: center;
+}
+
+
+
+/* main left  */
+main .main-container .container-left{
+     width: 30%;
+     margin: 0 10px 0 0;
+     /* background: teal; */
+     justify-content: center;
+     align-content: center;;
+}
+
+.main-container .container-left h1{
+    color: var(--colorText);
+    font-size: 5vh;
+}
+
+.container-left p a{
+    color:var(--colorLinks);
+    font-size: 20px;
+    text-decoration: none;
+}
+.container-left p {
+    color: var(--colorText);
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp:2;
+overflow: hidden;
+text-align: justify;
+}
+
+
+/* main right  */
+main .main-container .container-right{
+    position:relative;
+     width: 70%;
+     margin: 0 auto;
+     /* background: blue; */
+     display: flex;
+     justify-content: center;
+     align-content: center;
+     height: 500px;
+}
+
+
+
+.main-container .container-right .img-network{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("./img/main.png") no-repeat center/contain;
+}
+
+
+/* sytle footer  */
+footer{
+    background: #000;
+    width: 100vw;
+    padding:20px 0;
+}
+
+footer .footer-container{
+     width: 90%;
+     margin: 0 auto;
+     /* background: teal; */
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+
+.footer-container .container-links {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+.footer-container .container-links h3{
+   color: var(--colorText);
+   margin: 10px 0;
+   text-transform: capitalize;
+}
+
+.footer-container .container-links ul{
+display: flex;
+flex-direction: column;
+margin: 0 0 0 10px;
+}
+.footer-container .container-links ul li{
+width: 150px;
+background:var(--colorBtn);
+margin: 0 0 5px 0;
+border-radius: 7px;
+padding: 7px;
+text-align: center;
+list-style-type: none;
+}
+.footer-container .container-links ul li a{
+    color: var(--colorText);
+    text-decoration: none;
+}
+
+
+.container-partenair{
+    /* background: ; */
+    width: 50%;
+    
+}
+.container-partenair h3{
+   color: var(--colorText);    
+}
+.container-partenair ul{
+    /* background: ; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+
+}
+.container-partenair ul li{
+    position: relative;
+   width:100px;
+   height:100px;
+   list-style-type: none;
+   margin: 0 40px;
+   display: block;
+
+}
+.container-partenair ul li img{
+    position: absolute;
+width:100%;
+height: 100%;
+object-fit: contain;
+}
+
+
+
+
+/* Responsive  */
+
+@media screen and (max-width: 700px){
+    .main-container{
+        flex-direction : column;
+    }
+    .footer-container{
+        flex-direction: column;
+    }
+    .container-partenair{
+        flex-direction: column;
+        margin: 10px 0 0 0px;
+
+    }
+     .container-partenair ul {
+        flex-direction: column;
+     }
+}
